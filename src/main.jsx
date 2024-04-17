@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Main from './components/Main.jsx';
 import Phones from './components/Phones.jsx';
+import Phone from './components/Phone.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
         path:'/Phones',
         element:<Phones></Phones>,
         loader: () => fetch('http://localhost:5000/phones'),
+      },
+      {
+        path:'/Phone/:id',
+        element:<Phone></Phone>,
+        loader:({params}) => fetch(`http://localhost:5000/phones/${params.id}`)
       }
     ]
   },
