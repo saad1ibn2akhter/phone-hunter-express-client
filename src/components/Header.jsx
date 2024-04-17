@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <div>
-            <Link>All phones</Link>
+            <Link to='/phones'>All phones</Link>
         </div>
     );
 };
